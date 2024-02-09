@@ -1,11 +1,11 @@
 import 'dart:async';
 
 
+import 'package:ag_logistics_partner/Domain/Rest/data/services/location/location_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../../data/models/all_orders_model.dart';
+import '../../../../../Data/models/all_orders_model.dart';
 import '../../../../providers/dio/dio_provider.dart';
-import '../location/location_service.dart';
 
 part 'all_orders_service.g.dart';
 

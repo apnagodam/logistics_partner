@@ -1,13 +1,13 @@
 import 'dart:async';
 
 
+import 'package:ag_logistics_partner/Domain/Rest/data/services/location/location_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../../Presentaion/utils/enums/enums.dart';
 import '../../../../../Presentaion/utils/validators/login_session_validator.dart';
-import '../../../../../data/models/current_orders_model.dart';
+import '../../../../../Data/models/current_orders_model.dart';
 import '../../../../providers/dio/dio_provider.dart';
-import '../location/location_service.dart';
 
 part 'running_orders_service.g.dart';
 

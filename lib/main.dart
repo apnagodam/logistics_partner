@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_helper_utils/flutter_helper_utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,17 +14,14 @@ import 'Presentaion/utils/widgets/widgets.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final sharedPreferences = await SharedPreferences.getInstance();
-
+  var pref = await SharedPref.load();
   var delegate = await LocalizationDelegate.create(
       basePath: 'assets/',
       fallbackLocale: 'hi',
       preferences: TranslatePreferences(),
       supportedLocales: ['en_US', 'hi']);
 
-  runApp(ProviderScope(overrides: [
-    sharedPreferencesProvider.overrideWithValue(sharedPreferences),
-  ], child: LocalizedApp(delegate, MyApp())));
+  runApp(ProviderScope(child: LocalizedApp(delegate, MyApp())));
 }
 
 class MyApp extends ConsumerWidget {
@@ -44,16 +40,20 @@ class MyApp extends ConsumerWidget {
             iconTheme: IconThemeData(color: Colors.green.shade800),
             useMaterial3: true,
           ),
-          home: Scaffold(body: ref.watch(locationServiceProvider).when(
-              data: (location) =>
-                  ref.read(runningOrdersServiceProvider).when(data: (data)=> ref.read(sharedPrefProvider).getToken().isEmpty || data.status=="3"
-                      ? const LoginPage()
-                      : const HomePage(), error: (e,s)=>Container(), loading: ()=>loader())
-              ,
-              error: (e, s) => Container(
-                child: Text(e.toString() + s.toString()),
-              ),
-              loading: () => loader()),),
+          home: Scaffold(
+            body: ref.watch(locationServiceProvider).when(
+                data: (location) => ref.read(runningOrdersServiceProvider).when(
+                    data: (data) =>
+                        SharedPref().getToken().isEmpty || data.status == "3"
+                            ? const LoginPage()
+                            : const HomePage(),
+                    error: (e, s) => Container(),
+                    loading: () => loader()),
+                error: (e, s) => Container(
+                      child: Text(e.toString() + s.toString()),
+                    ),
+                loading: () => loader()),
+          ),
         ));
   }
 }

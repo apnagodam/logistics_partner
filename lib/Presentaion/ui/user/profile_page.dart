@@ -16,7 +16,7 @@ class Profilepage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var userData = ref.watch(sharedPrefProvider).getUserData();
+    var userData = SharedPref().getUserData();
     var user = userData.userDetails;
 
     return Scaffold(

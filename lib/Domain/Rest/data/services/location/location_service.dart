@@ -1,11 +1,10 @@
 import 'dart:async';
 
-
+import 'package:ag_logistics_partner/Domain/providers/dio/dio_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../providers/dio/dio_provider.dart';
 import 'location_state.dart';
 part 'location_service.g.dart';
 
@@ -59,7 +58,8 @@ class LocationService extends _$LocationService {
             permissionState == LocationPermission.whileInUse) {
           final position = await Geolocator.getCurrentPosition();
 
-          ref.watch(dioProvider).updateDio({"lat":position.latitude,'long':position.longitude});
+          DioInstance(ref: ref).updateDio(
+              {"lat": position.latitude, 'long': position.longitude});
           ref.watch(latProvider.notifier).state = position.latitude;
           ref.watch(longProvider.notifier).state = position.longitude;
 

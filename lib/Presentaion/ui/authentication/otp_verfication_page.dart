@@ -1,6 +1,8 @@
 import 'dart:async';
 
 
+import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_service.dart';
+import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_state.dart';
 import 'package:ag_logistics_partner/Domain/providers/authentication/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_helper_utils/flutter_helper_utils.dart';
@@ -8,8 +10,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
-import '../../../Domain/Rest/data/services/authentication/authentication_service.dart';
-import '../../../Domain/Rest/data/services/authentication/authentication_state.dart';
+
 import '../../../Domain/providers/dio/dio_provider.dart';
 import '../../utils/enums/enums.dart';
 import '../../utils/shared_pref/shared_pref_provider.dart';
@@ -86,22 +87,16 @@ class OtpVerificationPage extends ConsumerWidget {
                     await ref.watch(authenticationProvider).verifyOtp(otp: verificationCode, phoneNumber: phoneNumber).then((value) {
                       if (value['status'] == 1) {
 
-                        ref.watch(sharedPrefProvider).setUserData(value);
-                        ref.read(sharedPrefProvider).setToken(ref
-                            .watch(sharedPrefProvider)
+                        SharedPref().setUserData(value);
+                        SharedPref().setToken(
+                            SharedPref()
                             .getUserData()
                             .authorization ??
                             "");
                         ref
                             .watch(otpStatusProvider.notifier)
                             .setOtpStatus(OtpStatus.FILLED);
-                        ref.read(dioProvider).updateDio({
-                          "Authentication":ref.read(sharedPrefProvider).setToken(ref
-                              .watch(sharedPrefProvider)
-                              .getUserData()
-                              .authorization ??
-                              ""),
-                        });
+                       
                         context.pAndRemoveUntil(const HomePage());
                       } else {
                         ref
@@ -148,8 +143,8 @@ class OtpVerificationPage extends ConsumerWidget {
                           .then((value) {
                         if (value['status'] == 1) {
                           successToast("Logged in successfully");
-                          ref.watch(sharedPrefProvider).setUserData(value);
-                          print(ref.watch(sharedPrefProvider).getUserData());
+                          SharedPref().setUserData(value);
+                          print(SharedPref().getUserData());
                           print(value);
                         }
                       });

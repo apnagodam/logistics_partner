@@ -11,13 +11,13 @@ class DioInstance extends StateNotifier<Dio> {
     initDio();
   }
 
-  final StateProviderRef? ref;
+  final dynamic? ref;
 
 
 
   Dio initDio() => state = Dio(BaseOptions(
       baseUrl: 'https://apnagodam.com/test/',
-      headers: {'Authorization': "\$2y\$10\$4/qBvVZ7X1X2ortbFd8TLuG4770XCB8eBQjwKybtino/7YHU3F38W"}))
+      headers: {'Authorization': SharedPref().getToken()}))
     ..interceptors.add(addInterceptors());
 
   addInterceptors() => InterceptorsWrapper(onResponse: (response, handler) {

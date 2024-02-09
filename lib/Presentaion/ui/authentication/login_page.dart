@@ -1,3 +1,4 @@
+import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_state.dart';
 import 'package:ag_logistics_partner/Domain/providers/authentication/authentication_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,8 +6,7 @@ import 'package:flutter_helper_utils/flutter_helper_utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
-import '../../../Domain/Rest/data/services/authentication/authentication_service.dart';
-import '../../../Domain/Rest/data/services/authentication/authentication_state.dart';
+
 import '../../utils/enums/enums.dart';
 import '../../utils/shared_pref/shared_pref_provider.dart';
 import '../../utils/validators/number_validator.dart';
@@ -39,12 +39,11 @@ class LoginPage extends ConsumerWidget {
               requestFocusOnTap: false,
               label: Text(translate('select_language')),
               onSelected: (LANG? color) async {
-                ref
-                    .watch(sharedPrefProvider)
+                SharedPref()
                     .setLanguage(color?.identifier ?? 'en');
 
                 await changeLocale(
-                    context, ref.watch(sharedPrefProvider).getLanguage());
+                    context, SharedPref().getLanguage());
               },
               dropdownMenuEntries:
                   LANG.values.map<DropdownMenuEntry<LANG>>((LANG color) {

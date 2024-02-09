@@ -1,4 +1,4 @@
-
+import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_service.dart';
 import 'package:ag_logistics_partner/Domain/providers/duty/duty_provider.dart';
 import 'package:ag_logistics_partner/Domain/providers/orders/orders_provider.dart';
 import 'package:ag_logistics_partner/Presentaion/ui/home/quality_check_page.dart';
@@ -12,9 +12,6 @@ import 'package:icons_plus/icons_plus.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../Domain/Rest/data/services/authentication/authentication_service.dart';
-import '../../../Domain/Rest/data/services/auto_accept/auto_accept_notifier.dart';
-import '../../../Domain/Rest/data/services/duty/duty_service.dart';
 import '../../../Domain/Rest/data/services/location/location_service.dart';
 import '../../../Domain/Rest/data/services/orders/running_orders_service.dart';
 import '../../../Domain/providers/dio/dio_provider.dart';
@@ -31,7 +28,6 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var sharedPrefData = ref.read(sharedPrefProvider);
 
     return Scaffold(
         floatingActionButton: FloatingActionButton.small(
@@ -52,20 +48,29 @@ class HomePage extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(translate('duty')),
-
                     ref.watch(dutyOnOffProvider(0)).when(
                         data: (data) => Switch(
                             value: ref.watch(dutyProvider.notifier).state,
                             onChanged: (value) {
-                              ref.watch(dutyStatusProvider).getLpDutyStatus(status: ref.watch(dutyProvider.notifier).state==true?0:1).then((response) {
-                                if (response['online_offline'].toString() == '1') {
+                              ref
+                                  .watch(dutyStatusProvider)
+                                  .getLpDutyStatus(
+                                      status: ref
+                                                  .watch(dutyProvider.notifier)
+                                                  .state ==
+                                              true
+                                          ? 0
+                                          : 1)
+                                  .then((response) {
+                                if (response['online_offline'].toString() ==
+                                    '1') {
                                   ref.watch(dutyProvider.notifier).state = true;
                                 } else {
-                                  ref.watch(dutyProvider.notifier).state = false;
+                                  ref.watch(dutyProvider.notifier).state =
+                                      false;
                                 }
                                 successToast(response['message'].toString());
                               });
-
                             }),
                         error: (e, s) =>
                             Switch(value: false, onChanged: (value) {}),
@@ -78,18 +83,36 @@ class HomePage extends ConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(translate('auto_accept')),
-                      ref.watch(autoAcceptStatusProvider(0)).when(data:(status)=>Switch(
-                          value:  ref.watch(autoAccetpProvider.notifier).state,
-                          onChanged: (value) {
-                           ref.watch(dutyStatusProvider).getAutoAcceptStatus( ref.watch(autoAccetpProvider.notifier).state==false?1:0).then((value) {
-                             if (value['auto_accept'] == "1") {
-                               ref.watch(autoAccetpProvider.notifier).state=true;
-                             } else {
-                               ref.watch(autoAccetpProvider.notifier).state=false;
-                             }
-                           });
-                          }), error: (e,s)=> Switch(value: false, onChanged: (value) {}), loading: ()=> Switch(value: false, onChanged: (value) {}))
-
+                      ref.watch(autoAcceptStatusProvider(0)).when(
+                          data: (status) => Switch(
+                              value:
+                                  ref.watch(autoAccetpProvider.notifier).state,
+                              onChanged: (value) {
+                                ref
+                                    .watch(dutyStatusProvider)
+                                    .getAutoAcceptStatus(ref
+                                                .watch(
+                                                    autoAccetpProvider.notifier)
+                                                .state ==
+                                            false
+                                        ? 1
+                                        : 0)
+                                    .then((value) {
+                                  if (value['auto_accept'] == "1") {
+                                    ref
+                                        .watch(autoAccetpProvider.notifier)
+                                        .state = true;
+                                  } else {
+                                    ref
+                                        .watch(autoAccetpProvider.notifier)
+                                        .state = false;
+                                  }
+                                });
+                              }),
+                          error: (e, s) =>
+                              Switch(value: false, onChanged: (value) {}),
+                          loading: () =>
+                              Switch(value: false, onChanged: (value) {}))
                     ],
                   ),
                 ),
@@ -103,7 +126,10 @@ class HomePage extends ConsumerWidget {
                   children: [
                     ref.watch(positionStreamProvider).when(
                         data: (position) {
-                          ref.watch(dioProvider).updateDio({"lat":position.latitude,'long':position.longitude});
+                          ref.watch(dioProvider).updateDio({
+                            "lat": position.latitude,
+                            'long': position.longitude
+                          });
 
                           return SlidingUpPanel(
                               parallaxEnabled: true,
@@ -372,7 +398,7 @@ class HomePage extends ConsumerWidget {
   }
 
   Widget drawerLayout(BuildContext context, WidgetRef ref) {
-    var sharedPrefData = ref.read(sharedPrefProvider);
+    var sharedPrefData =  SharedPref();
     var user = sharedPrefData.getUserData().userDetails;
     return Drawer(
       child: MediaQuery.removePadding(
@@ -412,8 +438,7 @@ class HomePage extends ConsumerWidget {
                         Visibility(
                             visible: user.name != null,
                             child: Text(
-                              ref
-                                      .read(sharedPrefProvider)
+                               SharedPref()
                                       .getUserData()
                                       .userDetails
                                       ?.name ??
@@ -493,8 +518,7 @@ class HomePage extends ConsumerWidget {
                                 await changeLocale(
                                     context, value == true ? 'en' : 'hi');
 
-                                await ref
-                                    .watch(sharedPrefProvider)
+                                 SharedPref()
                                     .setLanguage(value == true ? 'en' : 'hi');
                               }),
                           Text(
@@ -509,7 +533,7 @@ class HomePage extends ConsumerWidget {
               ),
               const Divider(),
               drawerItem(() {
-                ref.invalidate(runningOrdersServiceProvider);
+                ref.read(ordersProvider).getCurrentorders();
               }, LineAwesome.air_freshener_solid, 'refresh'),
               const Divider(),
               drawerItem(() {
@@ -545,7 +569,7 @@ class HomePage extends ConsumerWidget {
 var dutyProvider = StateProvider((ref) => false);
 var autoAccetpProvider = StateProvider((ref) => false);
 var languageChangeprovider = StateProvider((ref) =>
-    ref.watch(sharedPrefProvider).getLanguage() == 'en' ? true : false);
+     SharedPref().getLanguage() == 'en' ? true : false);
 
 var panelController = StateProvider((ref) => PanelController());
 

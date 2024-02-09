@@ -1,4 +1,4 @@
-import 'package:ag_logistics_partner/data/repoImpl/duty/duty_repo_impl.dart';
+import 'package:ag_logistics_partner/Data/repoImpl/duty/duty_repo_impl.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 var dutyStatusProvider = Provider((ref) => DutyRepoImpl());

@@ -1,9 +1,9 @@
 import 'package:ag_logistics_partner/Domain/providers/dio/dio_provider.dart';
 import 'package:ag_logistics_partner/Domain/repo/commodity/commodity_repo.dart';
-import 'package:ag_logistics_partner/data/models/commodity_calculation_model.dart';
-import 'package:ag_logistics_partner/data/models/commodity_calculation_response_model.dart';
-import 'package:ag_logistics_partner/data/models/commodity_type_model.dart';
-import 'package:ag_logistics_partner/data/models/commodity_update_model.dart';
+import 'package:ag_logistics_partner/Data/models/commodity_calculation_model.dart';
+import 'package:ag_logistics_partner/Data/models/commodity_calculation_response_model.dart';
+import 'package:ag_logistics_partner/Data/models/commodity_type_model.dart';
+import 'package:ag_logistics_partner/Data/models/commodity_update_model.dart';
 
 class CommodityRepoImpl extends CommodityRepo{
 

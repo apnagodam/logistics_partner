@@ -1,12 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 
-
+import 'package:ag_logistics_partner/Domain/Rest/data/services/location/location_service.dart';
+import 'package:ag_logistics_partner/Domain/providers/dio/dio_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../../Presentaion/utils/shared_pref/shared_pref_provider.dart';
-import '../../../../providers/dio/dio_provider.dart';
-import '../location/location_service.dart';
 
 part 'authentication_service.g.dart';
 
@@ -18,8 +17,9 @@ class AuthenticationService extends _$AuthenticationService {
   }
 
   Future<Map<String, dynamic>> sendOtp() async {
-    var response =
-        await ref.read(dioProvider).initDio().post('api/apna_send_otp', queryParameters: {
+    var response = await DioInstance(ref: ref)
+        .initDio()
+        .post('api/apna_send_otp', queryParameters: {
       'number': arg,
       'app_type': 'LP',
     });
@@ -29,7 +29,8 @@ class AuthenticationService extends _$AuthenticationService {
 
   Future<Map<String, dynamic>> verifyOtp(String otp, String token) async {
     var response = await ref
-        .read(dioProvider).initDio()
+        .read(dioProvider)
+        .initDio()
         .post('api/apna_verify_otp', queryParameters: {
       'number': arg,
       'lat': ref.watch(latProvider.notifier).state,
@@ -42,6 +43,6 @@ class AuthenticationService extends _$AuthenticationService {
 
   Future<void> logoutUser() async {
     ref.invalidate(dioProvider);
-    await ref.watch(sharedPrefProvider).sharedPreferences.clear();
+    await SharedPref.clear();
   }
 }

@@ -1,8 +1,8 @@
-import 'package:ag_logistics_partner/data/models/commodity_calculation_model.dart';
-import 'package:ag_logistics_partner/data/repoImpl/commodity/commodity_repo_impl.dart';
+import 'package:ag_logistics_partner/Data/models/commodity_calculation_model.dart';
+import 'package:ag_logistics_partner/Data/repoImpl/commodity/commodity_repo_impl.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../../data/models/commodity_update_model.dart';
+import '../../../Data/models/commodity_update_model.dart';
 
 var commodityProvider = Provider((ref) => CommodityRepoImpl());
 var commodityParametersProvider = FutureProvider.family(
