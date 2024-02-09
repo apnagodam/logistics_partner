@@ -1,0 +1,377 @@
+<resources>
+    <string name="app_name">एजी लॉजिस्टिक पार्टनर</string>
+    <string name="app_name_splash">अपना गोदाम लॉजिस्टिक पार्टनर</string>
+    <string name="need_permission">अनुमति चाहिए</string>
+    <string name="msg_permission">इस ऐप को इस सुविधा का उपयोग करने के लिए अनुमति की आवश्यकता है। आप उन्हें ऐप सेटिंग में अनुमति दे सकते हैं.</string>
+    <string name="permission_alert">सेटिंग्स में जाओ</string>
+    <string name="cancel">कैंसिल </string>
+    <string name="ok">ओके</string>
+    <string name="logout_alert">क्या आप लॉगआउट करना चाहते हैं?</string>
+    <string name="alert">चेतावनी</string>
+    <string name="call_for_help">मदद के लिए कॉल करे</string>
+    <string name="varify_msg">आप वरीफाइड नहीं हैं। कृपया केवाईसी पूरा करें.</string>
+    <string name="varify_msg_kvc_done">आप वेरीफाई नहीं है। आईवीआर पर कॉल करे</string>
+    <string name="yes">हाँ</string>
+    <string name="blank_msg">डेटा नहीं मिला !!! !!!</string>
+    <string name="call">केवाईसी पूरा करे</string>
+    <string name="no">नहीं</string>
+    <string name="error_request">कुछ भूल हुई है। कृपया पुन: प्रयास करें</string>
+
+    <string name="phone_number">अपना फ़ोन नंबर दर्ज करें *</string>
+    <string name="otp_number">अपना OTP दर्ज करें</string>
+    <string name="submit">जमा करे</string>
+    <string name="terms_cond">मैं नियम और शर्त से सहमत हूं।</string>
+    <string name="highlight_terms">नियम और शर्त</string>
+    <string name="terms_cond_valida">कृपया शर्त के साथ सहमत पर टिक करें.</string>
+    <string name="otp">OTP भेजें</string>
+    <string name="signup">क्या आपके पास कोई खाता नहीं है?</string>
+    <string name="title_signUp">रजिस्टर करें</string>
+    <string name="user_number">अपना नाम दर्ज करें *</string>
+    <string name="verify">वेरीफाई OTP</string>
+    <string name="resend">OTP फिर से भेजे</string>
+
+    <string name="error_validateMobile">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="error_validateotp">अपना OTP डालें</string>
+    <string name="error_validateMobileChar">मोबाइल नंबर में न्यूनतम 10 अंक होने चाहिए।</string>
+    <string name="select_language">भाषा चुनें</string>
+    <string name="done">समाप्त</string>
+    <string name="select_any_one" translatable="false">किसी एक का चयन करें</string>
+    <string name="general">* व्यक्तिगत विवरण</string>
+    <string name="seller">विक्रेता</string>
+    <string name="submit_kyc">जमा करें</string>
+    <string name="buyer">क्रेता</string>
+    <string name="KYC">केवाईसी</string>
+    <string name="document">दस्तावेज़</string>
+    <string name="aadhar_number">आधार संख्या</string>
+    <string name="pancard_number">पैनकार्ड नंबर</string>
+    <string name="passbook_photo">बैंक पासबुक फोटो *</string>
+    <string name="home">डैशबोर्ड</string>
+    <string name="home_vlc">डैशबोर्ड</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="referral_code">रेफेर करे और प्राप्त करे </string>
+    <string name="order">डील स्टेटमेंट</string>
+    <string name="exist_app">Apna Godam एप्लिकेशन को बंद करने के लिए फिर से दबाएं</string>
+    <string name="ivr">आईवीआर</string>
+    <string name="suggestion_email">सुझाव ईमेल</string>
+    <string name="activity_notification">एक्टिविटी नोटिफिकेशन इ-मेल</string>
+    <string name="change_language">भाषा बदलो</string>
+    <string name="change_mobile_no">मोबाइल नंबर बदलें</string>
+    <string name="commodity_price">अनाज की कीमत</string>
+    <string name="commodity_quinity">कमोडिटी की मात्रा </string>
+    <string name="commodity_name">वस्तु का नाम</string>
+    <string name="upload_aadhar_picture">अपनी आधार कार्ड की फोटो डाले </string>
+    <string name="rc_number">वाहन पंजीकरण प्रमाण पत्र (आरसी) की फोटो डाले </string>
+    <string name="dl_number">ड्राइविंग लाइसेंस फोटो</string>
+    <string name="upload_rc_picture">अपनी वाहन पंजीकरण प्रमाणपत्र तस्वीर अपलोड करें</string>
+    <string name="upload_dl_picture">अपना  वाहन ड्राइविंग लाइसेंस चित्र अपलोड करें</string>
+    <string name="notification">नोटिफिकेशन </string>
+    //// profile
+    //general
+    <string name="driver_name">चालक का नाम *</string>
+    <string name="driver_name_error"> चालक का नाम दर्ज करें</string>
+    <string name="email">ईमेल</string>
+    <string name="email_validation">Enter Email ID</string>
+    <string name="mobile">ईमेल आईडी दर्ज करें</string>
+    <string name="mobile_error">मोबाइल नं.</string>
+    <string name="age">आयु</string>
+    <string name="age_validation">आयु दर्ज करें</string>
+    <string name="full_address">पूरा पता</string>
+    <string name="age_min_validation">आपकी आयु न्यूनतम 18 वर्ष होनी चाहिए।</string>
+    <string name="full_address_validation">पूरा पता दर्ज करें</string>
+    // kvc
+    <string name="account_number">बैंक खाता नम्बर.</string>
+    <string name="ifsc_code">बैंक IFSC कोड</string>
+    <string name="account_number_validation">बैंक खाता संख्या दर्ज करें.</string>
+    <string name="error_validateaadharChar">कृपया सही आधार नंबर दर्ज करें.</string>
+    <string name="error_validatepancardChar">कृपया सही पैनकार्ड नंबर दर्ज करें</string>
+    <string name="ifsc_code_validation">IFSC दर्ज करें</string>
+    <string name="bank_name">बैंक का नाम चुनें</string>
+    <string name="customer_name">ग्राहक का नाम</string>
+    <string name="customer_photo">ग्राहक की फोटो</string>
+    <string name="customer_phone">मोबाइल नं.</string>
+    <string name="bardana_type">बारदाना चुनें</string>
+    <string name="aadhar_number_error">आधार कार्ड नं.</string>
+    <string name="pancard_number_error">पैनकार्ड नंबर दर्ज करें</string>
+    //vehicle info
+    <string name="vehcile">वाहन</string>
+    <string name="vehcile_number">गाडी नंबर.</string>
+    <string name="vehcile_number_validation">गाडी नंबर डाले</string>
+    <string name="Vehcile_min_capictiy">गाडी न्यूनतम क्षमता (Qtl) *</string>
+    <string name="Vehcile_min_capictiy_error">गाडी की न्यूनतम क्षमता दर्ज करेंy</string>
+    <string name="Vehcile_max_capictiy">गाडी अधिकतम क्षमता (Qtl) *</string>
+    <string name="Vehcile_max_capictiy_error">गाडी की अधिकतम क्षमता (MT)</string>
+    <string name="Vehcile_rc_number">गाडी का आरसी नंबर ।</string>
+    <string name="Vehcile_rc_number_error">गाडी का आरसी नंबर ।</string>
+    <string name="Vehcile_insurance_company">गाडी बीमा कंपनी</string>
+    <string name="Vehcile_insurance_company_error">गाडी की बीमा कंपनी का नाम दर्ज करें</string>
+    <string name="Vehcile_insurance_no">गाडी बीमा नंबर </string>
+    <string name="Vehcile_insurance_no_error">गाडी बीमा नंबर </string>
+    <string name="Vehcile_mileage">गाडी का माइलेज</string>
+    <string name="Vehcile_mileage_error">गाडी माइलेज दर्ज करें.</string>
+    <string name="driving_lic">ड्राइविंग लाइसेंस नंबर </string>
+    <string name="driving_lic_error">ड्राइविंग लाइसेंस नंबर </string>
+    <string name="driving_lic_expire_date">ड्राइविंग लाइसेंस समाप्ति तिथि</string>
+    // vehicle type
+    <string name="vehicle_hint">Vehicle type</string>
+    <string name="permit_hint">Permit type</string>
+    <string-array name="array_type_grade">
+        <item>Select Quality Grade</item>
+        <item>G</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string-array name="array_type">
+        <item>Vehicle type*</item>
+        <item>Pick Up</item>
+        <item>Tractor</item>
+        <item>Truck (6 Wheeler)</item>
+        <item>Truck (12 Wheeler)</item>
+        <item>Trailer</item>
+    </string-array>
+    // permit type
+    <string-array name="permit_type">
+        <item>Permit type</item>
+        <item>Local or State Permit</item>
+        <item>National Permit</item>
+    </string-array>
+    // Fuel type
+    <string name="fuel_hint">Fuel type</string>
+    <string-array name="Fuel_type">
+        <item>Fuel type</item>
+        <item>Diesel</item>
+        <item>Petrol</item>
+    </string-array>
+    //document
+    <string name="vehicle_image">गाडी बीमा फोटो</string>
+    <string name="upload_vehicle_image">अपनी गाडी बीमा फोटो अपलोड करें</string>
+    <string name="pancard_image">पैनकार्ड फोटो </string>
+    <string name="upload_pancard_image">अपनी पैनकार्ड फोटो अपलोड करें</string>
+    <string name="passport_size_photo">पासपोर्ट साइज फोटो*</string>
+    <string name="upload_passport_size_photo">अपनी पासपोर्ट फोटो अपलोड करें</string>
+    <string name="upload_picture">अपना पासबुक/चेक फोटो अपलोड करें</string>
+    //facilities
+    <string name="facilities">सुविधाएं</string>
+    <string name="Bardana">बारदाना</string>
+    <string name="Labour">मज़दूर</string>
+    <string name="Bag_Closer">सूआ सूतली </string>
+    <string name="Weight_Scale">कांटा </string>
+    <string name="no_internet_connection">कोई इंटरनेट कनेक्शन नहीं...</string>
+    <string name="hint_otp">कृपया वेरिफ़िकेशन कोड भेजे </string>
+    <string name="my_profile">मेरी प्रोफाइल</string>
+
+
+    <!--calculation-->
+    <string name="quality_variance_report">गुणवत्ता भिन्न रिपोर्ट</string>
+    <string name="enter_market_price">बाजार मूल्य दर्ज करें</string>
+    <string name="parameter">पैरामीटर</string>
+    <string name="normal">साधारण</string>
+    <string name="extreme">चरम</string>
+    <string name="actual">वास्तविक</string>
+    <string name="price_diff_rs">मूल्य का अंतर। (रु।)</string>
+    <string name="differance">अंतर</string>
+    <string name="moisture">नमी</string>
+    <string name="broken">टूटा हुआ</string>
+    <string name="five_percent">5%</string>
+    <string name="thirteen_percent">13%</string>
+    <string name="eleven_percent">11%</string>
+    <string name="zero">0.0</string>
+    <string name="percent">%</string>
+    <string name="thin">पतला</string>
+    <string name="six_percent">6%</string>
+    <string name="eight_percent">8%</string>
+    <string name="tcw">दाना</string>
+    <string name="forty_percent">40%</string>
+    <string name="thirty_nine_percent">39%</string>
+    <string name="fm">FM</string>
+    <string name="tikki">टिक्की</string>
+    <string name="zero_percent">0</string>
+    <string name="ten_percent">10</string>
+    <string name="one_percent">1%</string>
+    <string name="two_percent">2%</string>
+    <string name="qv_rs">क्यूवी रु</string>
+    <string name="final_price">अंतिम राशि</string>
+    <string name="enterWeight">कृपया वजन दर्ज करें (किलो में)</string>
+    <string name="weight_">वजन</string>
+    <string name="bags">बैग</string>
+    <string name="dharam_kanta">धर्मकांटा</string>
+    <string name="s_n">बैग क्रमांक.</string>
+    <string name="add_more">अधिक जोड़ें</string>
+    <string name="confirm">पुष्टि करें</string>
+    <string name="re_sumit">पुनः सबमिट करें</string>
+    <string name="total_price">कुल रकम</string>
+    <string name="total_bags">कुल बैग</string>
+    <string name="total_weight">कुल वजन</string>
+    <string name="submitTotalPrice">आप पूरी गणना के बाद जमा कर सकते हैं</string>
+    <string name="first_kanta">पहली कांटा पर्ची</string>
+    <string name="secount_kanta">दूसरी कांटा पर्ची</string>
+    <string name="enter_net_Weight">कृपया अनाज का पूरा वजन दर्ज करे। (Qtl.)</string>
+    <string name="delivery_detail">Delivery Detail</string>
+    <string name="pickup_at">Pickup at</string>
+    <string name="distance">Distance</string>
+    <string name="book_a_delivery">Book a Stock</string>
+    <string name="booking_not_found">बुकिंग नहीं है</string>
+    <string name="booking_accepted">Booking Accepted</string>
+    <string name="callText">Call</string>
+    <string name="sms">SMS</string>
+    <string name="pickup_package">on the way</string>
+    <string name="pickup_pickup">Ready to pickup</string>
+    <string name="default_notification_channel_id" translatable="false">default</string>
+    <string name="veh_issue">वाहन की समस्या</string>
+    <string name="personal_issue">व्यक्तिगत समस्या</string>
+    <string name="deseert_issue">आपदा समस्या</string>
+    <string name="other">अन्य समस्या</string>
+    <string name="cancel_ride">सवारी रद्द कारण</string>
+    <string name="tracking_heading">ऑल माई डील ट्रैकिंग</string>
+
+    <string name="loginCreateSugg">लॉग इन करें या खाता बनाएं</string>
+    <string name="amountPaySugg">Pay using UPI,Wallet,Bank Accounts and Cards</string>
+    <string name="proceed_securely">सुरक्षित रूप से आगे बढ़ें</string>
+    <string name="need_help">Need help?</string>
+    <string name="agreetoTermCondition"><![CDATA[आगे बढ़ते हुए, आप हमारे नियम और शर्तों से सहमत होते हैं]]></string>
+    <string name="highlight_termsC">नियम और शर्तों</string>
+    <string name="commodity">अनाज</string>
+    <string name="congratulations">बधाई हो</string>
+    <string name="cancel_order">आदेश रद्द</string>
+    <string name="txt_kyc_highlight">आप हमारे साथ पंजीकृत हैं। कृपया अपना केवाईसी पूरा करें</string>
+    <string name="txt_kyc_refer">कृपया अपना केवाईसी पूरा करें</string>
+    <string name="save">संपादित करें</string>
+    <string name="profile_lp">लॉजिस्टिक पार्टनर प्रोफाइल</string>
+    <string name="wait_pric">कृपया प्रतीक्षा कीजिये! उपयोगकर्ता आपके अंतिम मूल्य को स्वीकार कर रहा है</string>
+    <string name="wait_weight">कृपया प्रतीक्षा कीजिये! उपयोगकर्ता आपके अंतिम भार को स्वीकार कर रहा है</string>
+
+    <string name="update_now">अभी Update करें</string>
+    <string name="msg_update_app">इस ऐप का नया संस्करण उपलब्ध है। बेहतर उपयोगकर्ता अनुभव के लिए कृपया अब अपडेट करें.</string>
+    <string name="serach_key">खोजें</string>
+
+
+    ////// Dodo Work
+    <string name="dodo_dashboard">डैशबोर्ड</string>
+    <string name="total_inventory">कुल इन्वेंटरी:-</string>
+    <string name="inventory_list">इन्वेंटरी सूची</string>
+    <string name="your_bank_balance">आपका बैंक बैलेंस</string>
+    <string name="order_id">आदेश आईडी</string>
+    <string name="User_name">विक्रेता का नाम</string>
+    <string name="User_phone">उपयोगकर्ता फोन नंबर</string>
+    <string name="User_address">उपयोगकर्ता का पता</string>
+    <string name="User_photo">उपयोगकर्ता प्रोफ़ाइल फ़ोटो</string>
+    <string name="commodity_image">कमोडिटी फोटो</string>
+    <string name="pricing_apply_date">मूल्य निर्धारण समय</string>
+    <string name="pricing_accept_date">मूल्य निर्धारण स्वीकार समय</string>
+    <string name="weight_apply_date">तोलते समय वज़न</string>
+    <string name="weight_accept_date">वजन स्वीकार समय</string>
+    <string name="lp_to_user_km">टर्मिनल से उपयोगकर्ता किमी</string>
+    <string name="user_to_terminal_km">उपयोगकर्ता से टर्मिनल किमी</string>
+    <string name="lp_total_km">एलपी कुल किमी</string>
+    <string name="total_weight_qtl">कुल वजन (Qtl.)</string>
+    <string name="total_weight_kg">कुल वजन (KG.)</string>
+    <string name="booking_apply_date">बुकिंग का समय</string>
+    <string name="booking_accept_date">बुकिंग स्वीकार की तारीख</string>
+    <string name="deal_done_time">सौदे का समय </string>
+    <string name="sell_date">बिक्री का समय</string>
+    <string name="duty">ड्यूटी</string>
+    <string name="auto_accept">ऑटो स्वीकार</string>
+    <string name="enter_total_beg">कुल बेग दर्ज करें</string>
+    <string name="remove">हटाना</string>
+    <string name="quality_grade">गुणवत्ता ग्रेड</string>
+    <string name="enterWeight_each_bag">भर्ती (किलो में)</string>
+    <string name="bookings">सभी बुकिंग</string>
+    <string name="view">मूल्य निर्धारण बाकी</string>
+    <string name="action">प्रतिक्रिया</string>
+    <string name="previous">पूर्व पेज</string>
+    <string name="next">अगला पेज</string>
+    <string name="pricing">कीमत निर्धारण</string>
+    <string name="price">कीमत</string>
+    <string name="pricing_error">माफ़ करना! आप सुबह 7 बजे से पहले और शाम 7 बजे के बाद कमोडिटी का मूल्य निर्धारण नहीं कर सकते।.</string>
+    <string name="pricing_vari">माफ़ करना! आप बाजार मूल्य के पांच प्रतिशत से अधिक कमोडिटी का मूल्य निर्धारण नहीं कर सकते.</string>
+    <string name="quaility_grade_val">गुणवत्ता ग्रेड का चयन करें</string>
+    <string name="fina_price_greterr">माफ़ करना! अंतिम मूल्य शून्य से अधिक होना चाहिए</string>
+    <string name="error_we">राशि का भुगतान कैसे करें का चयन करें</string>
+    <string name="error_we_qtl">प्रति क्विंटल मूल्य दर्ज करें</string>
+    <string name="error_we_amount">कुल राशि दर्ज करें</string>
+    <string name="select_useertype">वेंडर का चयन करें</string>
+    <string name="lp">लॉजिस्टिक पार्टनर</string>
+    <string name="transporter">ट्रांसपोर्टर</string>
+    <string name="labour">मजदूर</string>
+    <string name="thrasher">थ्रेशर</string>
+    <string name="upload_passport_size_photo_val">अपनी पासपोर्ट साइज फोटो अपलोड करने के लिए यहां क्लिक करें</string>
+    <string name="upload_picture_val">अपनी पासबुक / चैक इमेज अपलोड करने के लिए यहां क्लिक करें</string>
+    <string name="pancard_number_val">अपनी पैनकार्ड फोटो अपलोड करने के लिए यहां क्लिक करें</string>
+    <string name="upload_aadhar_picture_val">अपनी आधार कार्ड फोटो अपलोड करने के लिए यहां क्लिक करें</string>
+    <string name="aadhar_picture">आधार कार्ड की फोटो</string>
+    <string name="vendor_kyc">विक्रेता केवाईसी</string>
+    <string name="vendor_add">वेंडर जोड़ें</string>
+    <string name="vehicle_">वाहन का फोटो</string>
+    <string name="upload_vehicle_error">अपना वाहन फोटो अपलोड करने के लिए यहां क्लिक करें</string>
+    <string name="trip_start">ट्रिप स्टार्ट</string>
+    <string name="upload_commodity_photo_val">यहां क्लिक करें</string>
+    <string name="transportor_all">सभी ट्रांसपोर्टर डील</string>
+    <string name="alert_transport_book">क्या आप इस ट्रांसपोर्टर को बुक करना सुनिश्चित कर रहे हैं ?</string>
+    <string name="Lp_min_capictiy">एलपी न्यूनतम वजन क्षमता (क्विंटल)*</string>
+    <string name="lp_min_capictiy_error">एलपी न्यूनतम वजन क्षमता (क्विंटल) दर्ज करें</string>
+    <string name="lp_max_capictiy">एलपी मैक्स वजन क्षमता (क्विंटल)*</string>
+    <string name="lp_max_capictiy_error">एलपी मैक्स वजन क्षमता (क्विंटल) दर्ज करें</string>
+    <string name="error_lp_min_max_weight_cap">एलपी मैक्स वजन क्षमता एलपी न्यूनतम वजन क्षमता से अधिक होनी चाहिए</string>
+    <string name="error_trans_min_max_weight_cap">ट्रांसपोर्टर मैक्स वजन क्षमता ट्रांसपोर्टर न्यूनतम वजन क्षमता से अधिक होनी चाहिए</string>
+    <string name="error_trans_min_max_weigh">ट्रांसपोर्टर वाहन न्यूनतम क्षमता किसान कमोडिटी वजन से अधिक होनी चाहिए</string>
+    <string name="trans_name">ट्रांसपोर्टर नाम दर्ज करें *</string>
+    <string name="trans_phone_number">चालक फ़ोन नंबर दर्ज करे *</string>
+    <string name="avg_weght_bag">औसत वजन प्रति बैग</string>
+    <string name="trans_cost">ट्रांसपोर्टर अनुमानित लागत गणना</string>
+    <string name="weight_quintal">औसत वजन(क्विंटल)</string>
+    <string name="terminal_name1">टर्मिनल का नाम</string>
+    <string name="total_km_tran">"कुल km.:-"</string>
+    <string name="cost_approx">"लगभग। लागत :-"</string>
+    <string name="cost_avg">"औसत लागत"</string>
+
+    <string name="date">तारीख</string>
+    <string name="location_title">किसान का नाम</string>
+    <string name="con_id">ट्रिप आईडी</string>
+    <string name="my_convance_list">ट्रिप लिस्ट</string>
+    <string name="reject">अस्वीकार</string>
+    <string name="approved">स्वीकृत</string>
+    <string name="rejected">अस्वीकृत</string>
+    <string name="alert_trip_reject">क्या आपको यकीन है? क्या आप इस ट्रिप को हटाना चाहते हैं!!</string>
+    <string name="under_process">कार्यरत</string>
+    <string name="trans_name_nam">ट्रांसपोर्टर नाम</string>
+    <string name="avg_bags_weight">औसत वजन प्रति बैग शून्य से अधिक होना चाहिए</string>
+    <string name="refresh">पुनः लोड करें</string>
+
+    <string name="printer">ब्लूटूथ प्रिंटर</string>
+    <string name="other_print">अन्य प्रिंट</string>
+
+    <string name="packing">पैकिंग</string>
+    <string name="packing_vall">पैकिंग राशि :-</string>
+    <string name="jute">जूट बारदाना</string>
+    <string name="plastic">प्लास्टिक बारदाना</string>
+    <string name="loss">खुला </string>
+    <string name="poer_error">आपके पास पर्याप्त वॉलेट राशि नहीं है।</string>
+    <string name="accept_lp_book">स्वीकार करना</string>
+    <string name="farmer_information">किसान की जानकारी</string>
+    <string name="send_otp">OTP भेजें</string>
+    <string name="start_navigation">नेविगेशन शुरू करें</string>
+    <string name="reject_ride">सौदा रद्द करे</string>
+    <string name="duty_onoff">ड्यूटी</string>
+    <string name="ask_to_user_for_otp">उपयोगकर्ता से ओटीपी के लिए पूछें</string>
+    <string name="enter_user_otp">उपयोगकर्ता ओटीपी दर्ज करें</string>
+    <string name="manditx">मंडी टैक्स :-</string>
+    <string name="weight_module">वजन निर्धारण</string>
+    <string name="market_price_in_qtl">बाजार मूल्य (क्विंटल में)</string>
+    <string name="commodity_load_in_truck_photo">लोड गाड़ी की फोटो </string>
+    <string name="total_transport_cost">कुल ट्रांसपोर्ट कीमत</string>
+    <string name="total_kanta_cost">कुल कांटा कीमत</string>
+    <string name="vehicle_holding_charge">गाड़ी होल्डिंग चार्ज</string>
+    <string name="print_report">रिपोर्ट प्रिंट करें</string>
+    <string name="intention_to_buy">खरीदने का इरादा</string>
+    <string name="minimum_guarantee_price">न्यूनतम गारंटी मूल्य</string>
+    <string name="report_submit">रिपोर्ट जमा करें</string>
+    <string name="hl">HL</string>
+    <string name="kb">KB</string>
+    <string name="potia">Potia</string>
+    <string name="red_green">Red Green</string>
+    <string name="black_tip">Black Tip</string>
+    <string name="check_quality">गुणवत्ता जाँचें</string>
+    <string name="details">विवरण</string>
+    <string name="approx_weight">अनुमानित व़जन</string>
+    <string name="token">टोकन</string>
+</resources>

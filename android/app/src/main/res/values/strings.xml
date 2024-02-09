@@ -1,0 +1,413 @@
+<resources>
+    <string name="app_name">AG Logistic Partner</string>
+    <string name="app_name_splash">Apna Godam Logistic Partner</string>
+    <string name="need_permission">Need Permissions</string>
+    <string name="msg_permission">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="permission_alert">GOTO SETTINGS</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">ok</string>
+    <string name="logout_alert">Do you want to logout?</string>
+    <string name="alert">Alert</string>
+    <string name="call_for_help">Call For Help</string>
+    <string name="yes">Yes</string>
+    <string name="blank_msg">Data Not Found !!!</string>
+    <string name="varify_msg">You are not  Verified. Please Complete KYC.</string>
+    <string name="varify_msg_kvc_done">You are not  Verified. Call to IVR</string>
+    <string name="call">Complete KYC</string>
+    <string name="no">No</string>
+    <string name="error_request">Some error occurred. Please try again</string>
+    <string name="otp_number">Enter your OTP</string>
+    <string name="otp">Send OTP</string>
+    <string name="signup">Don\'t you have an account?</string>
+    <string name="title_signUp">Register</string>
+    <string name="verify">Verify OTP</string>
+    <string name="resend">Resend OTP</string>
+    <string name="error_validateMobile">Enter your Mobile Number</string>
+    <string name="error_validateotp">Enter your OTP Number</string>
+    <string name="error_validateMobileChar">Mobile Number must contain min 10 Digits.</string>
+    <string name="select_language">Select Language</string>
+    <string name="done">Done</string>
+    <string name="submit_kyc">Submit</string>
+    <string name="select_any_one" translatable="false">SELECT ANY ONE</string>
+    <string name="general">* Personal Details</string>
+    <string name="seller">Seller</string>
+    <string name="buyer">Buyer</string>
+    <string name="KYC">KYC</string>
+    <string name="lang_pref" translatable="false">language_pref</string>
+    <string name="document">Document</string>
+    <string name="passbook_photo">Bank Passbook Photo *</string>
+    <string name="home">Dashboard</string>
+    <string name="home_vlc">Dashboard</string>
+    <string name="logout">Logout</string>
+    <string name="phone_number">Enter your phone number *</string>
+    <string name="notification">Notification</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="referral_code">Refer &amp;Earn</string>
+    <string name="order">Deal Statement</string>
+    <string name="exist_app">Press again to close Apna Godam LP Application</string>
+    <string name="ivr">IVR</string>
+    <string name="user_number">Enter your Name *</string>
+    <string name="submit">Submit</string>
+    <string name="terms_cond">I agree with the Terms of Condition.</string>
+    <string name="terms_cond_valida">Please tick the  agree with the Terms of Condition.</string>
+    <string name="highlight_terms">Terms of Condition</string>
+    // singodvalal
+    <!--  <string name="map_key" translatable="false">AIzaSyAMmHfAIByG2811zjfZWRGge3ruk6m3cR0</string>-->
+    // apnagodam@gmail.com
+    <!-- <string name="map_key" translatable="false">AIzaSyCBSE9f-8MEb5om7pzPBJo1yt-9ObNYhA4</string>-->
+    <string name="map_key" translatable="false">AIzaSyC4ZOehDCLuTHmWUJpnnU0IHjlufhYY5hs</string>
+    <!-- <string name="map_key_direction" translatable="false">AIzaSyBimSdaM5d4qwD_E-WJq-ZJhNHG3S6auhU</string>-->
+    <string name="suggestion_email">Suggestion Emails</string>
+    <string name="activity_notification">Activity Notification Email</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_mobile_no">Change Mobile Number</string>
+    <string name="commodity_price">commodity Price</string>
+    <string name="commodity_quinity">commodity Quantity</string>
+    <string name="commodity_name">commodity Name</string>
+    <string name="upload_aadhar_picture">Upload your Aadhar card  Photo</string>
+    <string name="rc_number">Registration Certificate(RC) Photo</string>
+    <string name="dl_number">Driving License Photo</string>
+    <string name="upload_rc_picture">Upload your RC  Photo</string>
+    <string name="upload_dl_picture">Upload your DL  Photo</string>
+    // profile info
+    <string name="driver_name">Full Driver Name *</string>
+    <string name="driver_name_error">Enter Full Driver Name</string>
+    <string name="email">Email</string>
+    <string name="email_validation">Enter Email ID</string>
+    <string name="mobile">Mobile No.</string>
+    <string name="mobile_error">Ennter Mobile No.</string>
+    <string name="age">Age</string>
+    <string name="age_validation">Enter Age</string>
+    <string name="age_min_validation">Your Age must be Min. 18 Year</string>
+    <string name="full_address">Full Address</string>
+    <string name="full_address_validation">Ennter Full Address</string>
+    // kvc info
+    <string name="account_number">Bank Account No.</string>
+    <string name="ifsc_code">Bank IFSC Code</string>
+    <string name="account_number_validation">Enter Bank Account No.</string>
+    <string name="error_validateaadharChar">Please Enter Correct Aadhar Number</string>
+    <string name="error_validatepancardChar">Please Enter Correct PanCard Number</string>
+    <string name="ifsc_code_validation">Enter IFSC</string>
+    <string name="bank_name">Select Bank Name</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_phone">Customer Phone</string>
+    <string name="customer_photo">Customer Photo</string>
+    <string name="bardana_type">Select Bardana Type</string>
+    <string name="aadhar_number">Aadhar Card No.</string>
+    <string name="pancard_number">PanCard No</string>
+    <string name="aadhar_number_error">Enter Aadhar Card No.</string>
+    <string name="pancard_number_error">Enter PanCard No</string>
+    //vehicle info
+    <string name="vehcile">* Vehicle</string>
+    <string name="vehcile_number">Vehicle Number.</string>
+    <string name="vehcile_number_validation">Enter Vehicle Number.</string>
+    <string name="Vehcile_min_capictiy">Vehicle Min Capacity(QTL) *</string>
+    <string name="Vehcile_min_capictiy_error">Enter Vehicle Min Capacity</string>
+    <string name="Vehcile_max_capictiy">Vehicle Max Capacity(QTL) *</string>
+    <string name="Vehcile_max_capictiy_error">Enter Vehicle Max Capacity</string>
+    <string name="Vehcile_rc_number">Vehicle RC NO.</string>
+    <string name="Vehcile_rc_number_error">Enter Vehicle RC NO</string>
+    <string name="Vehcile_insurance_company">Vehicle Insurance Company</string>
+    <string name="Vehcile_insurance_company_error">Enter Vehicle Insurance Company</string>
+    <string name="Vehcile_insurance_no">Vehicle Insurance policy No.</string>
+    <string name="Vehcile_insurance_no_error">Enter Vehicle Insurance No.</string>
+    <string name="Vehcile_mileage">Vehicle Mileage</string>
+    <string name="Vehcile_mileage_error">Enter Vehicle Mileage No.</string>
+    <string name="driving_lic">Driving Licence No.</string>
+    <string name="driving_lic_error">Enter Driving Licence No.</string>
+    <string name="driving_lic_expire_date">Driving Licence Expiry Date.</string>
+    // vehicle type
+    <string name="vehicle_hint">Vehicle type</string>
+    <string name="permit_hint">Permit type</string>
+    <string-array name="array_type">
+        <item>Vehicle type *</item>
+        <item>Pick Up</item>
+        <item>Tractor</item>
+        <item>Truck (6 Wheeler)</item>
+        <item>Truck (12 Wheeler)</item>
+        <item>Trailer</item>
+    </string-array>
+    <string-array name="array_type_grade">
+        <item>Select Quality Grade</item>
+        <item>G</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    // permit type
+    <string-array name="permit_type">
+        <item>Permit type</item>
+        <item>Local or State Permit</item>
+        <item>National Permit</item>
+    </string-array>
+    // Fuel type
+    <string name="fuel_hint">Fuel type</string>
+    <string-array name="Fuel_type">
+        <item>Fuel type</item>
+        <item>Diesel</item>
+        <item>Petrol</item>
+    </string-array>
+    <string-array name="array_sikai_grade">
+        <item>Select Quality Type</item>
+        <item>Gold</item>
+        <item>Silver</item>
+        <item>Chalu</item>
+    </string-array>
+
+    <string-array name="array_milk_grade">
+        <item>Select Quality Type</item>
+        <item>Java</item>
+        <item>Mathdi</item>
+        <item>Desi</item>
+    </string-array>
+    <string-array name="array_Chugga_grade">
+        <item>Select Quality Type</item>
+        <item>Black</item>
+        <item>White</item>
+    </string-array>
+    //document
+    <string name="vehicle_">Vehicle Photo</string>
+    <string name="upload_vehicle_error">Click Here To Upload your Vehicle Photo</string>
+    <string name="vehicle_image">Vehicle Insurance Photo</string>
+    <string name="upload_vehicle_image">Upload your Vehicle Insurance Photo</string>
+    <string name="pancard_image">Pancard Photo</string>
+    <string name="upload_pancard_image">Upload your Pancard Photo</string>
+    <string name="passport_size_photo">Photo(Passport size)*</string>
+    <string name="upload_passport_size_photo">Upload your Passport Photo</string>
+    <string name="upload_picture">Upload your PassBook/Cheque  Image</string>
+    //facilities
+    <string name="facilities">facilities</string>
+    <string name="Bardana">Bardana</string>
+    <string name="Labour">Labour</string>
+    <string name="Bag_Closer">Bag Closer</string>
+    <string name="Weight_Scale">Weight Scale</string>
+    <string name="no_internet_connection">No Internet Connection.</string>
+    <string name="hint_otp">Please type varification code sent to </string>
+    <string name="my_profile">My Profile</string>
+    <string name="default_notification_channel_id" translatable="false">default</string>
+
+    <!--calculation-->
+    <string name="quality_variance_report">Quality Variance Report</string>
+    <string name="enter_market_price">Enter Market Price(in Qtl.)</string>
+    <string name="parameter">Parameter</string>
+    <string name="normal">Normal</string>
+    <string name="extreme">Extreme</string>
+    <string name="actual">Actual</string>
+    <string name="price_diff_rs">Price Diff. (Rs.)</string>
+    <string name="differance">Differance</string>
+    <string name="moisture">Moisture</string>
+    <string name="broken">Broken</string>
+    <string name="five_percent">5%</string>
+    <string name="thirteen_percent">13%</string>
+    <string name="eleven_percent">11%</string>
+    <string name="zero">0.0</string>
+    <string name="percent">%</string>
+    <string name="thin">Thin</string>
+    <string name="six_percent">6%</string>
+    <string name="eight_percent">8%</string>
+    <string name="tcw">TCW</string>
+    <string name="forty_percent">40%</string>
+    <string name="thirty_nine_percent">39%</string>
+    <string name="fm">FM</string>
+    <string name="tikki">Tikki</string>
+    <string name="zero_percent">0</string>
+    <string name="ten_percent">10</string>
+    <string name="one_percent">1%</string>
+    <string name="two_percent">2%</string>
+    <string name="qv_rs">QV Rs</string>
+    <string name="final_price">Final Price</string>
+    <string name="re_sumit">Re Submit</string>
+    <string name="enterWeight">Please enter weight(in kg.)</string>
+    <string name="weight">Weight Pending</string>
+    <string name="weight_">Weight</string>
+    <string name="bags">Bags</string>
+    <string name="dharam_kanta">Dharam Kanta</string>
+    <string name="s_n">Bag S.N.</string>
+    <string name="add_more">Add More</string>
+    <string name="confirm">Confirm</string>
+    <string name="end_trip" translatable="false">End Trip</string>
+    <string name="total_price">Total Amount</string>
+    <string name="total_bags">Total Bags</string>
+    <string name="total_weight">Total Weight</string>
+    <string name="submitTotalPrice">You can submit after entire calculation</string>
+    <string name="first_kanta">First Kanta Parchi</string>
+    <string name="secount_kanta">Second Kanta Parchi</string>
+    <string name="enter_net_Weight">Please enter Net weight (Qtl.)</string>
+    <string name="delivery_detail">Delivery Detail</string>
+    <string name="pickup_at">Pickup at</string>
+    <string name="distance">Distance</string>
+    <string name="book_a_delivery">Book a Stock</string>
+    <string name="booking_not_found">Booking not found</string>
+    <string name="booking_accepted">Booking Accepted</string>
+    <string name="callText">Call</string>
+    <string name="sms">SMS</string>
+    <string name="pickup_package">on the way</string>
+    <string name="pickup_pickup">Ready to pickup</string>
+    <string name="veh_issue">Vehicle Issue</string>
+    <string name="personal_issue">Personal Issue</string>
+    <string name="deseert_issue">Disaster  Issue</string>
+    <string name="other">Other problem</string>
+    <string name="cancel_ride">Cancel Ride Reason</string>
+    <string name="tracking_heading">All My Deal Tracking</string>
+
+    <string name="loginCreateSugg">Login or Create an account</string>
+    <string name="amountPaySugg">Pay using UPI,Wallet,Bank Accounts and Cards</string>
+    <string name="proceed_securely">Proceed Securely</string>
+    <string name="need_help">Need help?</string>
+    <string name="agreetoTermCondition"><![CDATA[By proceeding,you agree to our Terms and Conditions]]></string>
+    <string name="highlight_termsC">Terms and Conditions</string>
+    <string name="commodity">Commodity</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="txt_kyc_highlight">You are registered with us.Please complete your KYC</string>
+    <string name="txt_kyc_refer">Please First  complete your KYC</string>
+    <string name="save">Save</string>
+    <string name="profile_lp">Logistic Partner Profile</string>
+    <string name="wait_pric">Please wait! user is accepting your final price</string>
+    <string name="wait_weight">Please wait! user is accepting your final Weight</string>
+    <string name="update_now">Update now</string>
+    <string name="msg_update_app">New version of this app is available. For better user experience please update now.</string>
+    <string name="serach_key">Search</string>
+    ////// Dodo Work
+    <string name="dodo_dashboard">Dashboard</string>
+    <string name="total_inventory">Total Inventory:-</string>
+    <string name="inventory_list">Inventory List</string>
+    <string name="order_id">Order ID</string>
+    <string name="User_name">Seller Name</string>
+    <string name="User_phone">Customer Phone</string>
+    <string name="User_address">Customer Address</string>
+    <string name="User_photo">Customer Profile Photo</string>
+    <string name="commodity_image">Commodity Photo</string>
+    <string name="pricing_apply_date">Pricing Time</string>
+    <string name="pricing_accept_date">Pricing Accept Time</string>
+    <string name="weight_apply_date">Weight Time</string>
+    <string name="weight_accept_date">Weight Accept Time</string>
+    <string name="lp_to_user_km">LP To User Km</string>
+    <string name="user_to_terminal_km">User To Terminal Km</string>
+    <string name="lp_total_km">LP Total Km</string>
+    <string name="total_weight_qtl">Total Weight (Qtl.)</string>
+    <string name="total_weight_kg">Total Weight (KG.)</string>
+    <string name="booking_apply_date">Book Time</string>
+    <string name="booking_accept_date">Booking Accept Time</string>
+    <string name="deal_done_time">Deal Finish Time</string>
+    <string name="your_bank_balance">Your Bank Balance</string>
+    <string name="sell_date">Sell Date</string>
+    <string name="duty">Duty</string>
+    <string name="auto_accept">Auto Accept</string>
+    <string name="enter_total_beg">Enter total beg</string>
+    <string name="remove">Remove</string>
+    <string name="quality_grade">Quality Grade</string>
+    <string name="enterWeight_each_bag">Weight in each Bag(in kg.)</string>
+    <string name="bookings">All Bookings</string>
+    <string name="view">Pricing Pending</string>
+    <string name="action">Action</string>
+    <string name="previous">Previous Page</string>
+    <string name="next">Next Page</string>
+    <string name="pricing">Pricing</string>
+    <string name="price">Price</string>
+    <string name="pricing_error">Sorry! You can not do pricing of commodity before 7 AM and after 7 PM. </string>
+    <string name="pricing_vari">Sorry! You can not do pricing of commodity greater than five percent of market price.</string>
+    <string name="quaility_grade_val">Select Quality Grade</string>
+    <string name="fina_price_greterr">Final Price Greater Than Zero</string>
+    <string name="error_we">Select How to Pay Amount</string>
+    <string name="error_we_qtl">Enter Price per Quintal</string>
+    <string name="error_we_amount">Enter Total Amount</string>
+
+    <string-array name="array_connector_type">
+        <item>Select</item>
+        <item>Weight</item>
+        <item>Amount</item>
+    </string-array>
+    <string name="select_useertype">Select Vendor Type</string>
+    <string name="lp">Logistic Partner</string>
+    <string name="transporter">Transporter</string>
+    <string name="labour">Labour</string>
+    <string name="thrasher">Thrasher</string>
+    <string name="upload_passport_size_photo_val">Click Here To Upload your Passport Image</string>
+    <string name="upload_picture_val">Click Here To Upload your PassBook/Cheque  Image</string>
+    <string name="pancard_number_val">Click Here To Upload your PanCard Image</string>
+    <string name="upload_aadhar_picture_val">Click Here To Upload your Aadhaar Card  Image</string>
+    <string name="upload_commodity_photo_val">Click Here</string>
+    <string name="aadhar_picture">Aadhar Card Image</string>
+    <string name="vendor_kyc">Vendor KYC</string>
+    <string name="vendor_add">Vendor Add</string>
+    <string name="trip_start">Trip Start</string>
+    <string name="transportor_all">All Transporter Deal</string>
+    <string name="vehicle_no">ENTER VEHICLE/TRUCK NO.</string>
+    <string name="driver_phone_no_enter">Enter Driver Phone No *</string>
+    <string name="alert_transport_book">Are You Sure to Book This Transporter ?</string>
+    <string name="alert_final">Are you sure to send This Transporter to Terminal ? </string>
+    <string name="Lp_min_capictiy">LP Min Weight Capacity(QTL)*</string>
+    <string name="lp_min_capictiy_error">Enter LP Min Weight Capacity(QTL)</string>
+    <string name="lp_max_capictiy">LP MAx Weight Capacity(QTL)*</string>
+    <string name="lp_max_capictiy_error">Enter LP Max Weight Capacity(QTL)</string>
+    <string name="error_lp_min_max_weight_cap">LP Max Weight Capacity Should Be more Than LP Min Weight Capacity</string>
+    <string name="error_trans_min_max_weight_cap">Transporter Vehicle Max Capacity Should Be more Than Transporter Vehicle Min Capacity</string>
+    <string name="error_trans_min_max_weigh">Transporter Vehicle Min Capacity Should Be more Than Farmer Commodity Weight</string>
+    <string name="trans_name">Enter Transporter Name *</string>
+    <string name="trans_phone_number">Enter Driver phone number *</string>
+    <string name="avg_weght_bag">Average Weight per Bag</string>
+    <string name="trans_cost">Transporter Approx Cost Calculation</string>
+    <string name="weight_quintal">Average (Quintal)</string>
+    <string name="terminal_name1">Terminal Name</string>
+    <string name="total_km_tran">"Total KM:- "</string>
+    <string name="cost_approx">"Approx.Cost :- "</string>
+    <string name="cost_avg">"Average Cost"</string>
+
+    <string name="pdf_customer">PDF_Customer</string>
+    <string name="pdf_lp">PDF_LP</string>
+    <string name="pdf_invoice">PDF_Invoice</string>
+    <string name="date">Date</string>
+    <string name="location_title">Farmer Name</string>
+    <string name="con_id">Trip ID</string>
+    <string name="my_convance_list">All Trip List</string>
+    <string name="reject">Reject</string>
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="alert_trip_reject">Are you Sure? Do you want to Delete this Trip!</string>
+    <string name="under_process">Under Process</string>
+    <string name="trans_name_nam">Transporter Name</string>
+    <string name="avg_bags_weight">Average Weight per Bag Should Be Grater than Zero</string>
+    <string name="refresh">Refresh</string>
+    <string name="print">Print Report</string>
+    <string name="printer">Bluetooth Printer</string>
+    <string name="other_print">Other Print</string>
+    <string name="packing">Packing</string>
+    <string name="jute">Jute bardana</string>
+    <string name="plastic">plastic baardana</string>
+    <string name="loss">loose</string>
+    <string name="gatepass">Enter Gate pass/Serial No</string>
+    <string name="gatepass_val">Please Enter Gate pass Number or Serial Number</string>
+    <string name="poer_error">You do not have enough Wallet Amount.</string>
+    <string name="accept_lp_book">Accept</string>
+    <string name="farmer_information">Farmer Information</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="start_navigation">Start Navigation</string>
+    <string name="reject_ride">Reject Ride</string>
+    <string name="duty_onoff">Duty</string>
+    <string name="ask_to_user_for_otp">Ask To User For OTP</string>
+    <string name="enter_user_otp">Enter User OTP</string>
+    <string name="manditx">Mandi Tax :-</string>
+    <string name="packing_vall">Packing Amount :-</string>
+    <string name="weight_module">Weight Module</string>
+    <string name="market_price_in_qtl">Market Price(in Qtl.)</string>
+    <string name="commodity_load_in_truck_photo">Commodity Load In Truck Photo</string>
+    <string name="total_transport_cost">Total Transport Cost</string>
+    <string name="total_kanta_cost">Total Kanta Cost</string>
+    <string name="vehicle_holding_charge">Vehicle Holding Charge</string>
+    <string name="print_report">Print Report</string>
+    <string name="intention_to_buy">Intention to buy</string>
+    <string name="minimum_guarantee_price">Minimum Guarantee Price</string>
+    <string name="report_submit">Report Submit</string>
+    <string name="hl">HL</string>
+    <string name="kb">KB</string>
+    <string name="potia">Potia</string>
+    <string name="red_green">Red Green</string>
+    <string name="black_tip">Black Tip</string>
+    <string name="check_quality">Check Quality</string>
+    <string name="details">Details</string>
+    <string name="approx_weight">Approx weight</string>
+    <string name="token">Token</string>
+    <!--   <string name="sample_string"><![CDATA[<h2>Title</h2><br><p>Description here</p>]]></string>-->
+
+</resources>
