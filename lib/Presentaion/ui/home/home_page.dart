@@ -28,7 +28,6 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     return Scaffold(
         floatingActionButton: FloatingActionButton.small(
           onPressed: () {},
@@ -126,11 +125,6 @@ class HomePage extends ConsumerWidget {
                   children: [
                     ref.watch(positionStreamProvider).when(
                         data: (position) {
-                          ref.watch(dioProvider).updateDio({
-                            "lat": position.latitude,
-                            'long': position.longitude
-                          });
-
                           return SlidingUpPanel(
                               parallaxEnabled: true,
                               backdropEnabled: true,
@@ -398,7 +392,7 @@ class HomePage extends ConsumerWidget {
   }
 
   Widget drawerLayout(BuildContext context, WidgetRef ref) {
-    var sharedPrefData =  SharedPref();
+    var sharedPrefData = SharedPref();
     var user = sharedPrefData.getUserData().userDetails;
     return Drawer(
       child: MediaQuery.removePadding(
@@ -438,10 +432,7 @@ class HomePage extends ConsumerWidget {
                         Visibility(
                             visible: user.name != null,
                             child: Text(
-                               SharedPref()
-                                      .getUserData()
-                                      .userDetails
-                                      ?.name ??
+                              SharedPref().getUserData().userDetails?.name ??
                                   user.phone ??
                                   "",
                               style: const TextStyle(
@@ -518,7 +509,7 @@ class HomePage extends ConsumerWidget {
                                 await changeLocale(
                                     context, value == true ? 'en' : 'hi');
 
-                                 SharedPref()
+                                SharedPref()
                                     .setLanguage(value == true ? 'en' : 'hi');
                               }),
                           Text(
@@ -568,8 +559,8 @@ class HomePage extends ConsumerWidget {
 
 var dutyProvider = StateProvider((ref) => false);
 var autoAccetpProvider = StateProvider((ref) => false);
-var languageChangeprovider = StateProvider((ref) =>
-     SharedPref().getLanguage() == 'en' ? true : false);
+var languageChangeprovider =
+    StateProvider((ref) => SharedPref().getLanguage() == 'en' ? true : false);
 
 var panelController = StateProvider((ref) => PanelController());
 

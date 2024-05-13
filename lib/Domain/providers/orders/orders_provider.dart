@@ -4,4 +4,5 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 var ordersProvider = Provider((ref) => OrdersRepoImpl());
 
-var currentOrdersProvider = FutureProvider((ref) => ref.watch(ordersProvider).getCurrentorders());
+var currentOrdersProvider =
+    FutureProvider((ref) => ref.watch(ordersProvider).getCurrentorders());

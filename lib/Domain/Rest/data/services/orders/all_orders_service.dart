@@ -18,7 +18,7 @@ class AllOrdersService extends _$AllOrdersService {
 
   Future<List<Order>> getAllOrders() async {
     var response = await ref
-        .watch(dioProvider).initDio()
+        .watch(dioProvider)
         .get('lp_api/apna_lp_all_bookings', queryParameters: {
       'limit': 10,
       'lat': ref.watch(latProvider.notifier).state,

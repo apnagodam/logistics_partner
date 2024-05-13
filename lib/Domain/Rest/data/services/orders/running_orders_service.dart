@@ -20,7 +20,7 @@ class RunningOrdersService extends _$RunningOrdersService {
 
   Future<CurrentOrdersModel> getCurrentorders() async {
     var response = await ref
-        .read(dioProvider).initDio()
+        .read(dioProvider)
         .get('lp_api/apna_lp_all_current_bookings', queryParameters: {
       'limit': 10,
       'lat': ref.watch(latProvider.notifier).state,

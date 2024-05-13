@@ -5,7 +5,6 @@ class DutyRepoImpl extends DutyRepo {
   @override
   Future<Map<String, dynamic>> getLpDutyStatus({required int status}) async {
     var response = await DioInstance()
-        .initDio()
         .post('lp_api/apna_lp_online_offline', queryParameters: {
       'online_offline': status,
     });
@@ -16,7 +15,6 @@ class DutyRepoImpl extends DutyRepo {
   @override
   Future<Map<String, dynamic>> getAutoAcceptStatus(int status) async {
     var response = await DioInstance()
-        .initDio()
         .post('lp_api/apna_lp_auto_accept', queryParameters: {
       'auto_accept': status,
     });

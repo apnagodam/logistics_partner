@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_helper_utils/flutter_helper_utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Domain/Rest/data/services/location/location_service.dart';
@@ -21,7 +23,12 @@ void main() async {
       preferences: TranslatePreferences(),
       supportedLocales: ['en_US', 'hi']);
 
-  runApp(ProviderScope(child: LocalizedApp(delegate, MyApp())));
+  runApp(ProviderScope(
+      child: LocalizedApp(delegate, ResponsiveSizer(
+    builder: (context, orientation, screenType) {
+      return MyApp();
+    },
+  ))));
 }
 
 class MyApp extends ConsumerWidget {
@@ -36,6 +43,7 @@ class MyApp extends ConsumerWidget {
         child: MaterialApp(
           title: '',
           theme: ThemeData(
+            fontFamily: GoogleFonts.kanit().fontFamily,
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
             iconTheme: IconThemeData(color: Colors.green.shade800),
             useMaterial3: true,

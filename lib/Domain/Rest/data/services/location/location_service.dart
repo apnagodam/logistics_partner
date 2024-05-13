@@ -58,8 +58,7 @@ class LocationService extends _$LocationService {
             permissionState == LocationPermission.whileInUse) {
           final position = await Geolocator.getCurrentPosition();
 
-          DioInstance(ref: ref).updateDio(
-              {"lat": position.latitude, 'long': position.longitude});
+
           ref.watch(latProvider.notifier).state = position.latitude;
           ref.watch(longProvider.notifier).state = position.longitude;
 

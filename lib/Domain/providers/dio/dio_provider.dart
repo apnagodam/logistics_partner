@@ -5,37 +5,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../Presentaion/utils/shared_pref/shared_pref_provider.dart';
 
-class DioInstance extends StateNotifier<Dio> {
-
-  DioInstance({this.ref}) : super(Dio()) {
-    initDio();
-  }
-
-  final dynamic? ref;
-
-
-
-  Dio initDio() => state = Dio(BaseOptions(
-      baseUrl: 'https://apnagodam.com/test/',
-      headers: {'Authorization': SharedPref().getToken()}))
-    ..interceptors.add(addInterceptors());
-
-  addInterceptors() => InterceptorsWrapper(onResponse: (response, handler) {
-        Logger().w(response.data.toString());
-        return handler.next(response);
-      }, onError: (error, handler) {
-        Logger().e(error.message);
-        return handler.next(error);
-      }, onRequest: (request, handler) {
-        Logger().f(request.headers.toString());
-        Logger().d(request.baseUrl.toString() + request.path.toString());
-        Logger().f(request.data.toString());
-        return handler.next(request);
-      });
-
-  updateDio(Map<String, dynamic> headers) {
-    state.options.headers.addAll(headers);
-  }
+Dio DioInstance() {
+  Dio initDio() =>
+      Dio(BaseOptions(
+          baseUrl: 'https://apnagodam.com/test/',
+          headers: {'Authorization': SharedPref().getToken()}))
+        ..interceptors.add(
+            LogInterceptor(requestBody: true, responseBody: true));
+  return initDio();
 }
 
-var dioProvider = StateProvider((ref) => DioInstance(ref: ref));
+var dioProvider = StateProvider((ref) => DioInstance());

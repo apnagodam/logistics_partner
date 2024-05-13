@@ -1,11 +1,11 @@
 import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_state.dart';
 import 'package:ag_logistics_partner/Domain/providers/authentication/authentication_provider.dart';
+import 'package:ag_logistics_partner/Presentaion/ui/home/WSP/wsp_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_helper_utils/flutter_helper_utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-
 
 import '../../utils/enums/enums.dart';
 import '../../utils/shared_pref/shared_pref_provider.dart';
@@ -39,11 +39,9 @@ class LoginPage extends ConsumerWidget {
               requestFocusOnTap: false,
               label: Text(translate('select_language')),
               onSelected: (LANG? color) async {
-                SharedPref()
-                    .setLanguage(color?.identifier ?? 'en');
+                SharedPref().setLanguage(color?.identifier ?? 'en');
 
-                await changeLocale(
-                    context, SharedPref().getLanguage());
+                await changeLocale(context, SharedPref().getLanguage());
               },
               dropdownMenuEntries:
                   LANG.values.map<DropdownMenuEntry<LANG>>((LANG color) {
@@ -121,37 +119,38 @@ class LoginPage extends ConsumerWidget {
                                 backgroundColor:
                                     context.themeData.primaryColor),
                             onPressed: () async {
-                              if (ref
-                                      .watch(numberValidationProvider)
-                                      .getStatus() ==
-                                  NumberValidation.CORRECT) {
-                                await ref
-                                    .watch(authenticationProvider)
-                                    .sendOtp(
-                                        phoneNumber:
-                                            phoneNumberController.text.toInt)
-                                    .then((value) {
-                                  if (value['status'] == "1") {
-                                    successToast(value['message'].toString());
-                                    if (value['token'] == null) {
-                                      ref.watch(tokenProvider.notifier).state =
-                                          value['otp'].toString();
-                                    } else {
-                                      ref.watch(tokenProvider.notifier).state =
-                                          value['token'].toString();
-                                    }
-                                    ref
-                                        .watch(otpStatusProvider.notifier)
-                                        .setOtpStatus(OtpStatus.SENT);
-                                    context.pushPage(OtpVerificationPage(
-                                      phoneNumber: phoneNumberController.text,
-                                    ));
-                                  }
-                                  else{
-                                    errorToast(value['message'].toString());
-                                  }
-                                });
-                              }
+                              context.pushPage(WSPHomeScreen());
+                              // if (ref
+                              //         .watch(numberValidationProvider)
+                              //         .getStatus() ==
+                              //     NumberValidation.CORRECT) {
+                              //   await ref
+                              //       .watch(authenticationProvider)
+                              //       .sendOtp(
+                              //           phoneNumber:
+                              //               phoneNumberController.text.toInt)
+                              //       .then((value) {
+                              //     if (value.status == "1") {
+                              //       successToast(value.message.toString());
+                              //       // if (value['token'] == null) {
+                              //       //   ref.watch(tokenProvider.notifier).state =
+                              //       //       value['otp'].toString();
+                              //       // } else {
+                              //       //   ref.watch(tokenProvider.notifier).state =
+                              //       //       value['token'].toString();
+                              //       // }
+                              //       ref
+                              //           .watch(otpStatusProvider.notifier)
+                              //           .setOtpStatus(OtpStatus.SENT);
+                              //
+                              //       context.pushPage(OtpVerificationPage(
+                              //         phoneNumber: phoneNumberController.text,
+                              //       ));
+                              //     } else {
+                              //       errorToast(value.message.toString());
+                              //     }
+                              //   });
+                              // }
                             },
                             child: Text(
                               translate(

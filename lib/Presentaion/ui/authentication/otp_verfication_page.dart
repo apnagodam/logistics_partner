@@ -1,6 +1,7 @@
 import 'dart:async';
+import 'dart:convert';
 
-
+import 'package:ag_logistics_partner/Data/models/auth_model.dart';
 import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_service.dart';
 import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_state.dart';
 import 'package:ag_logistics_partner/Domain/providers/authentication/authentication_provider.dart';
@@ -9,7 +10,6 @@ import 'package:flutter_helper_utils/flutter_helper_utils.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-
 
 import '../../../Domain/providers/dio/dio_provider.dart';
 import '../../utils/enums/enums.dart';
@@ -22,6 +22,7 @@ class OtpVerificationPage extends ConsumerWidget {
   const OtpVerificationPage({super.key, required this.phoneNumber});
 
   final String phoneNumber;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     if (ref.watch(timerCountProvider) == 0) {
@@ -84,28 +85,28 @@ class OtpVerificationPage extends ConsumerWidget {
                   borderColor: context.themeData.primaryColor,
                   borderWidth: 3,
                   onSubmit: (String verificationCode) async {
-                    await ref.watch(authenticationProvider).verifyOtp(otp: verificationCode, phoneNumber: phoneNumber).then((value) {
-                      if (value['status'] == 1) {
-
-                        SharedPref().setUserData(value);
+                    await ref
+                        .watch(authenticationProvider)
+                        .verifyOtp(
+                            otp: verificationCode, phoneNumber: phoneNumber)
+                        .then((value) {
+                      if (value.status == 1) {
+                        SharedPref().setUserData(
+                            jsonDecode(authenticationModelToMap(value)));
                         SharedPref().setToken(
-                            SharedPref()
-                            .getUserData()
-                            .authorization ??
-                            "");
+                            SharedPref().getUserData().authorization ?? "");
                         ref
                             .watch(otpStatusProvider.notifier)
                             .setOtpStatus(OtpStatus.FILLED);
-                       
+
                         context.pAndRemoveUntil(const HomePage());
                       } else {
                         ref
                             .watch(otpStatusProvider.notifier)
                             .setOtpStatus(OtpStatus.FAILED);
-                        errorToast(value['message']);
+                        errorToast(value.message ??= "Error");
                       }
                     });
-
                   }, // end onSubmit
                 ),
                 const SizedBox(

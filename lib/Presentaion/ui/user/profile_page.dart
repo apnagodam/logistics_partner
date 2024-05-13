@@ -89,17 +89,17 @@ class Profilepage extends ConsumerWidget {
               Visibility(
                   child: profileItem(
                       translate('vehcile'),
-                      userData.userDetails?.vehicleType ?? "N/A",
+                      userData.userDetails?.drivingLicenceNo ?? "N/A",
                       LineAwesome.truck_solid)),
               Visibility(
                   child: profileItem(
                       translate('Vehcile_min_capictiy'),
-                      userData.userDetails?.vehicleCapMin ?? "N/A",
+                      userData.userDetails?.drivingLicenceNo ?? "N/A",
                       LineAwesome.level_down_alt_solid)),
               Visibility(
                   child: profileItem(
                       translate('Vehcile_max_capictiy'),
-                      userData.userDetails?.vehicleCapMax ?? "N/A",
+                      userData.userDetails?.drivingLicenceNo ?? "N/A",
                       LineAwesome.level_up_alt_solid))
             ],
           )),

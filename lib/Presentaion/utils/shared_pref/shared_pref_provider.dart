@@ -35,9 +35,9 @@ class SharedPref {
 
   //login data
   setUserData(Map<String, dynamic> model) => sharedPreferences?.setString(
-      userDataKey, jsonEncode(AuthenticationModel.fromMap(model).toJson()));
+      userDataKey, jsonEncode(AuthenticationModel.fromMap(model).toMap()));
 
-  AuthenticationModel getUserData() => AuthenticationModel.fromJson(
+  AuthenticationModel getUserData() => AuthenticationModel.fromMap(
       jsonDecode(sharedPreferences?.getString(userDataKey) ?? ""));
 }
 
