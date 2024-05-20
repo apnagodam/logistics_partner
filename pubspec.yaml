@@ -67,6 +67,8 @@ dependencies:
   assorted_layout_widgets: ^9.0.1
   responsive_sizer: ^3.3.1
   google_fonts: 5.1.0
+  enefty_icons: ^1.0.7
+  modal_bottom_sheet: ^3.0.0-pre
   
 
 dev_dependencies:

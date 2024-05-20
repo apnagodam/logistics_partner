@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.apnagodam.ag.lp.ag_logistics_partner"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {

@@ -1,18 +1,13 @@
+import 'package:ag_logistics_partner/Presentaion/ui/home/WSP/wsp_home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_helper_utils/flutter_helper_utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Domain/Rest/data/services/location/location_service.dart';
-import 'Domain/Rest/data/services/orders/running_orders_service.dart';
-import 'Presentaion/ui/authentication/login_page.dart';
-import 'Presentaion/ui/home/home_page.dart';
 import 'Presentaion/utils/shared_pref/shared_pref_provider.dart';
 import 'Presentaion/utils/shared_pref/translation_preference.dart';
-import 'Presentaion/utils/widgets/widgets.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,25 +38,29 @@ class MyApp extends ConsumerWidget {
         child: MaterialApp(
           title: '',
           theme: ThemeData(
+            cardColor: Colors.white,
+            scaffoldBackgroundColor: Colors.white,
             fontFamily: GoogleFonts.kanit().fontFamily,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-            iconTheme: IconThemeData(color: Colors.green.shade800),
+            colorScheme: ColorScheme.fromSeed(
+                seedColor: Colors.green,
+                primary: Colors.green.shade900,
+                secondary: Colors.yellow),
             useMaterial3: true,
           ),
-          home: Scaffold(
-            body: ref.watch(locationServiceProvider).when(
-                data: (location) => ref.read(runningOrdersServiceProvider).when(
-                    data: (data) =>
-                        SharedPref().getToken().isEmpty || data.status == "3"
-                            ? const LoginPage()
-                            : const HomePage(),
-                    error: (e, s) => Container(),
-                    loading: () => loader()),
-                error: (e, s) => Container(
-                      child: Text(e.toString() + s.toString()),
-                    ),
-                loading: () => loader()),
-          ),
+          home: Scaffold(body: WSPHomeScreen()
+              // ref.watch(locationServiceProvider).when(
+              //     data: (location) => ref.read(runningOrdersServiceProvider).when(
+              //         data: (data) =>,
+              //             // SharedPref().getToken().isEmpty || data.status == "3"
+              //             //     ? const LoginPage()
+              //             //     : const HomePage(),
+              //         error: (e, s) => Container(),
+              //         loading: () => loader()),
+              //     error: (e, s) => Container(
+              //           child: Text(e.toString() + s.toString()),
+              //         ),
+              //     loading: () => loader()),
+              ),
         ));
   }
 }
