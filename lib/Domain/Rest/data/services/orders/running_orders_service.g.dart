@@ -7,7 +7,7 @@ part of 'running_orders_service.dart';
 // **************************************************************************
 
 String _$runningOrdersServiceHash() =>
-    r'bf9e0cc1df54e7ee82ac51d8e6407aebd84f0d8f';
+    r'4fe935f412f848eeea0be4243492cef2c2aba7e7';
 
 /// See also [RunningOrdersService].
 @ProviderFor(RunningOrdersService)

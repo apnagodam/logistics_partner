@@ -7,7 +7,7 @@ part of 'authentication_service.dart';
 // **************************************************************************
 
 String _$authenticationServiceHash() =>
-    r'f4f61f9a90405029ccafbe0846037d6d80e6e0e3';
+    r'a847d2fa4d8910bf776bb1b121907b52da34f586';
 
 /// Copied from Dart SDK
 class _SystemHash {

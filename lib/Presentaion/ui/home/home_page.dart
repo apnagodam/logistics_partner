@@ -10,11 +10,8 @@ import 'package:flutter_translate/flutter_translate.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../Domain/Rest/data/services/location/location_service.dart';
-import '../../../Domain/Rest/data/services/orders/running_orders_service.dart';
-import '../../../Domain/providers/dio/dio_provider.dart';
 import '../../utils/calculative_functions/functions.dart';
 import '../../utils/shared_pref/shared_pref_provider.dart';
 import '../../utils/validators/strings.dart';
