@@ -39,5 +39,7 @@ class StringContants {
     "Puducherry"
   ];
 
-  static const paymentType=['Driver','Transporter'];
+  static const paymentType = ['Driver', 'Transporter'];
+
+  static const advanceAmount = [10000, 20000, 30000];
 }
