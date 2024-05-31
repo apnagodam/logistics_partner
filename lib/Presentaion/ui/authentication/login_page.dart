@@ -31,11 +31,7 @@ class LoginPage extends ConsumerWidget {
               inputDecorationTheme: const InputDecorationTheme(
                   enabledBorder: null, disabledBorder: null),
               initialSelection: LANG.empty,
-              // controller: colorController,
-              // requestFocusOnTap is enabled/disabled by platforms when it is null.
-              // On mobile platforms, this is false by default. Setting this to true will
-              // trigger focus request on the text field and virtual keyboard will appear
-              // afterward. On desktop platforms however, this defaults to true.
+
               requestFocusOnTap: false,
               label: Text(translate('select_language')),
               onSelected: (LANG? color) async {

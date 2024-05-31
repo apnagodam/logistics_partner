@@ -10,7 +10,7 @@ class AuthenticationRepoImpl extends AuthenticationRepo {
   @override
   Future<OtpResponseModel> sendOtp({required int phoneNumber}) async {
     var response =
-        await DioInstance().post('api/apna_send_otp', queryParameters: {
+        await dio().post('api/apna_send_otp', queryParameters: {
       'number': phoneNumber,
       'app_type': 'LP',
     });
@@ -21,7 +21,7 @@ class AuthenticationRepoImpl extends AuthenticationRepo {
   Future<AuthenticationModel> verifyOtp(
       {required String otp, required String phoneNumber}) async {
     var response =
-        await DioInstance().post('api/apna_verify_otp', queryParameters: {
+        await dio().post('api/apna_verify_otp', queryParameters: {
       'number': phoneNumber,
       'otp': otp,
     });

@@ -1,12 +1,10 @@
 import 'package:ag_logistics_partner/Presentaion/ui/home/WSP/wsp_home_screen.dart';
-import 'package:ag_logistics_partner/Presentaion/ui/home/driver/driver_home_screen.dart';
-import 'package:ag_logistics_partner/Presentaion/ui/home/transporter/home/transporter_home_page.dart';
-import 'package:ag_logistics_partner/Presentaion/ui/home/transporter/transporter_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Domain/Rest/data/services/location/location_service.dart';
 import 'Presentaion/utils/shared_pref/shared_pref_provider.dart';
@@ -15,6 +13,9 @@ import 'Presentaion/utils/shared_pref/translation_preference.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var pref = await SharedPref.load();
+  var sharedPreferences =
+      Provider<SharedPreferences>((_) => throw UnimplementedError());
+
   var delegate = await LocalizationDelegate.create(
       basePath: 'assets/',
       fallbackLocale: 'hi',
@@ -22,11 +23,14 @@ void main() async {
       supportedLocales: ['en_US', 'hi']);
 
   runApp(ProviderScope(
+      overrides: [
+        sharedPreferences.overrideWithValue(pref),
+      ],
       child: LocalizedApp(delegate, ResponsiveSizer(
-    builder: (context, orientation, screenType) {
-      return MyApp();
-    },
-  ))));
+        builder: (context, orientation, screenType) {
+          return MyApp();
+        },
+      ))));
 }
 
 class MyApp extends ConsumerWidget {
@@ -49,13 +53,13 @@ class MyApp extends ConsumerWidget {
                   primary: Colors.green.shade900,
                   secondary: Colors.yellow),
               useMaterial3: false),
-          home: Scaffold(body: TransporterHomeScreen()
+          home: Scaffold(body: WSPHomeScreen()
               // ref.watch(locationServiceProvider).when(
               //     data: (location) => ref.read(runningOrdersServiceProvider).when(
               //         data: (data) =>,
-                          // SharedPref().getToken().isEmpty || data.status == "3"
-                          //     ? const LoginPage()
-                          //     : const HomePage(),
+              // SharedPref().getToken().isEmpty || data.status == "3"
+              //     ? const LoginPage()
+              //     : const HomePage(),
               //         error: (e, s) => Container(),
               //         loading: () => loader()),
               //     error: (e, s) => Container(

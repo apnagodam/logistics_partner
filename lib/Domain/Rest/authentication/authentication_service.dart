@@ -18,7 +18,7 @@ class AuthenticationService extends _$AuthenticationService {
 
   Future<Map<String, dynamic>> sendOtp() async {
     var response =
-        await DioInstance().post('api/apna_send_otp', queryParameters: {
+        await dio().post('api/apna_send_otp', queryParameters: {
       'number': arg,
       'app_type': 'LP',
     });

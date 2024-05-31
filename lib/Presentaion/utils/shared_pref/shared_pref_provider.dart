@@ -41,7 +41,7 @@ class SharedPref {
       jsonDecode(sharedPreferences?.getString(userDataKey) ?? ""));
 }
 
-final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
+final sharedPreferencesProvider = Provider<SharedPref>((ref) {
   throw UnimplementedError();
 });
 

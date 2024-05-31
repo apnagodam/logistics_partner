@@ -5,7 +5,7 @@ import 'package:ag_logistics_partner/Data/models/current_orders_model.dart';
 class OrdersRepoImpl extends OrdersRepo {
   @override
   Future<CurrentOrdersModel> getCurrentorders() async {
-    var response = await DioInstance()
+    var response = await dio()
         .get('lp_api/apna_lp_all_current_bookings', queryParameters: {
       'limit': 10,
     });

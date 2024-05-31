@@ -12,3 +12,5 @@ const String IMAGE_CATEGORY_URL =
     "https://apnagodam.com/test/resources/assets/upload/category";
 
 const String API_BASE_URL = "https://apnagodam.com/test/";
+
+const String LOCAL_BASE_URL = "https://192.168.1.100/trunk/api/";
