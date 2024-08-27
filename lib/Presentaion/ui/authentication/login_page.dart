@@ -1,6 +1,4 @@
-import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_state.dart';
-import 'package:ag_logistics_partner/Domain/providers/authentication/authentication_provider.dart';
-import 'package:ag_logistics_partner/Presentaion/ui/home/WSP/wsp_home_screen.dart';
+import 'package:ag_logistics_partner/Presentaion/ui/home/transporter/home/transporter_home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_helper_utils/flutter_helper_utils.dart';
@@ -10,8 +8,6 @@ import 'package:flutter_translate/flutter_translate.dart';
 import '../../utils/enums/enums.dart';
 import '../../utils/shared_pref/shared_pref_provider.dart';
 import '../../utils/validators/number_validator.dart';
-import '../../utils/widgets/widgets.dart';
-import 'otp_verfication_page.dart';
 
 var phoneNumberController = TextEditingController();
 
@@ -115,7 +111,7 @@ class LoginPage extends ConsumerWidget {
                                 backgroundColor:
                                     context.themeData.primaryColor),
                             onPressed: () async {
-                              context.pushPage(WSPHomeScreen());
+                              context.pushPage(TransporterHomePage());
                               // if (ref
                               //         .watch(numberValidationProvider)
                               //         .getStatus() ==

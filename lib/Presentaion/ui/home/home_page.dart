@@ -161,21 +161,25 @@ class HomePage extends ConsumerWidget {
                                                         PolylineResult result =
                                                             await polylinePoints
                                                                 .getRouteBetweenCoordinates(
-                                                          'AIzaSyCBSE9f-8MEb5om7pzPBJo1yt-9ObNYhA4',
+                                                          request: PolylineRequest(
+                                                            origin:  PointLatLng(
+                                                                position.latitude,
+                                                                position
+                                                                    .longitude),
+                                                            destination: PointLatLng(
+                                                                ref
+                                                                    .watch(
+                                                                    userLatProvider)
+                                                                    .latitude,
+                                                                ref
+                                                                    .watch(
+                                                                    userLatProvider)
+                                                                    .longitude),
+                                                            mode: TravelMode.driving
+                                                          ),
+                                                          googleApiKey: 'AIzaSyCBSE9f-8MEb5om7pzPBJo1yt-9ObNYhA4'
                                                           // Your Google Map Key
-                                                          PointLatLng(
-                                                              position.latitude,
-                                                              position
-                                                                  .longitude),
-                                                          PointLatLng(
-                                                              ref
-                                                                  .watch(
-                                                                      userLatProvider)
-                                                                  .latitude,
-                                                              ref
-                                                                  .watch(
-                                                                      userLatProvider)
-                                                                  .longitude),
+
                                                         );
                                                         if (result.points
                                                             .isNotEmpty) {
@@ -256,13 +260,27 @@ class HomePage extends ConsumerWidget {
                                                                               PolylinePoints();
                                                                           PolylineResult
                                                                               result =
-                                                                              await polylinePoints.getRouteBetweenCoordinates(
-                                                                            'AIzaSyCBSE9f-8MEb5om7pzPBJo1yt-9ObNYhA4',
+                                                                          await polylinePoints
+                                                                              .getRouteBetweenCoordinates(
+                                                                              request: PolylineRequest(
+                                                                                  origin:  PointLatLng(
+                                                                                      position.latitude,
+                                                                                      position
+                                                                                          .longitude),
+                                                                                  destination: PointLatLng(
+                                                                                      ref
+                                                                                          .watch(
+                                                                                          userLatProvider)
+                                                                                          .latitude,
+                                                                                      ref
+                                                                                          .watch(
+                                                                                          userLatProvider)
+                                                                                          .longitude),
+                                                                                  mode: TravelMode.driving
+                                                                              ),
+                                                                              googleApiKey: 'AIzaSyCBSE9f-8MEb5om7pzPBJo1yt-9ObNYhA4'
                                                                             // Your Google Map Key
-                                                                            PointLatLng(position.latitude,
-                                                                                position.longitude),
-                                                                            PointLatLng(ref.watch(userLatProvider).latitude,
-                                                                                ref.watch(userLatProvider).longitude),
+
                                                                           );
                                                                           if (result
                                                                               .points

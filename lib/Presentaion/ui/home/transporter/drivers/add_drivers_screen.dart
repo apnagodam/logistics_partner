@@ -106,7 +106,7 @@ class AddDriversScreen extends ConsumerWidget {
           height: 10,
         ),
         SizedBox(
-          width: context.widthPx,
+          width: MediaQuery.of(context).size.width,
           child: ElevatedButton(
               style: StyleConstants.buttonBordersStyle(
                   borderColor: ColorConstants.primaryColorWSP,
@@ -238,7 +238,7 @@ class AddDriversScreen extends ConsumerWidget {
           height: 10,
         ),
         SizedBox(
-          width: context.widthPx,
+          width: MediaQuery.of(context).size.width,
           child: ElevatedButton(
               style: StyleConstants.buttonBordersStyle(
                   borderColor: ColorConstants.primaryColorWSP,

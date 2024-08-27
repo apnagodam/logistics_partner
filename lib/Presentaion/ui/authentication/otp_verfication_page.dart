@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:ag_logistics_partner/Data/models/auth_model.dart';
+import 'package:ag_logistics_partner/Data/repoImpl/authentication/authentication_repo_impl.dart';
 import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_service.dart';
 import 'package:ag_logistics_partner/Domain/Rest/authentication/authentication_state.dart';
 import 'package:ag_logistics_partner/Domain/providers/authentication/authentication_provider.dart';
@@ -11,7 +12,6 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
-import '../../../Domain/providers/dio/dio_provider.dart';
 import '../../utils/enums/enums.dart';
 import '../../utils/shared_pref/shared_pref_provider.dart';
 import '../../utils/widgets/widgets.dart';
@@ -86,10 +86,10 @@ class OtpVerificationPage extends ConsumerWidget {
                   borderWidth: 3,
                   onSubmit: (String verificationCode) async {
                     await ref
-                        .watch(authenticationProvider)
-                        .verifyOtp(
-                            otp: verificationCode, phoneNumber: phoneNumber)
-                        .then((value) {
+                        .watch(verifyOtpProvider(
+                                otp: verificationCode, phoneNumber: phoneNumber)
+                            .future)
+                        .then((value) async {
                       if (value.status == 1) {
                         SharedPref().setUserData(
                             jsonDecode(authenticationModelToMap(value)));
@@ -107,6 +107,7 @@ class OtpVerificationPage extends ConsumerWidget {
                         errorToast(value.message ??= "Error");
                       }
                     });
+
                   }, // end onSubmit
                 ),
                 const SizedBox(
